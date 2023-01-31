@@ -14,6 +14,6 @@ document.getElementById("replaceBtn").addEventListener("click", function () {
   text = text.replace(/love/g, "ass");
   text = text.replace(/Love/g, "Ass");
 
-  text = text.replace(/\b(a|A)\b/g, "fuckin");
+  text = text.replace(/\b(a|A)\b/g, "a fuckin");
   output.innerHTML = text;
 });
