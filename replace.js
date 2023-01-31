@@ -20,6 +20,8 @@ document.getElementById("replaceBtn").addEventListener("click", function () {
   text = text.replace(/heart/g, "deeYock");
   text = text.replace(/babe/g, "beeYotch");
   text = text.replace(/with/g, "spank");
+  text = text.replace(/talk to/g, "fart on");
+  text = text.replace(/talking to/g, "farting on");
 
   text = text.replace(/\b(a|A)\b/g, "a fuckin");
   output.innerHTML = text;
