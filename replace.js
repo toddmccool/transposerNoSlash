@@ -16,6 +16,7 @@ document.getElementById("replaceBtn").addEventListener("click", function () {
   text = text.replace(/assd/g, "jizzed on");
   text = text.replace(/good/g, "tight");
   text = text.replace(/I ass/g, "i'd bang");
+  text = text.replace(/ass me/g, "bang me");
 
   text = text.replace(/\b(a|A)\b/g, "a fuckin");
   output.innerHTML = text;
