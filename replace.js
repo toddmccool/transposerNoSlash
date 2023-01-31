@@ -9,8 +9,8 @@ document.getElementById("replaceBtn").addEventListener("click", function () {
   text = text.replace(/love/g, "ass");
   text = text.replace(/Love/g, "Ass");
 
-  text = text.replace(/falling\sin\slove\swith/g, "eating dat Ass of");
-  text = text.replace(/Falling\sin\slove\swith/g, "Eating dat Ass of");
+  text = text.replace(/falling in love with/g, "eating dat Ass of");
+  text.replace(/Falling in love with/g, "eating dat Ass of");
 
   text = text.replace(/fallin\sin\slove with/g, "eatin dat Ass of");
   text = text.replace(/Fallin\sin\slove with/g, "Eatin dat Ass of");
