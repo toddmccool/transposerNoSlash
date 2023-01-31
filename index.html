@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text Replacer</title>
+  </head>
   <body>
-    <form>
-      <label for="textInput">Enter text to transpose:</label><br />
-      <textarea id="textInput" rows="50" cols="80"></textarea><br />
-      <input type="button" onclick="transpose()" value="Transpose" />
-    </form>
-
-    <script src="script.js"></script>
-    <title>transposer-key finder no pesky slashes</title>
+    <textarea id="textInput" rows="50" cols="80"></textarea>
+    <br />
+    <button id="replaceBtn">Replace</button>
+    <br />
+    <br />
+    <textarea id="output" rows="50" cols="80" readonly></textarea>
+    <script src="replace.js"></script>
   </body>
 </html>
