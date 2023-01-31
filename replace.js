@@ -23,6 +23,7 @@ document.getElementById("replaceBtn").addEventListener("click", function () {
   text = text.replace(/talk to/g, "fart on");
   text = text.replace(/talking to/g, "farting on");
   text = text.replace(/on them hoes/g, "on you");
+  text = text.replace(/spankout/g, "without");
 
   text = text.replace(/\b(a|A)\b/g, "a fuckin");
   output.innerHTML = text;
