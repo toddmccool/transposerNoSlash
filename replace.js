@@ -3,7 +3,7 @@ const output = document.getElementById("output");
 
 document.getElementById("replaceBtn").addEventListener("click", function () {
   let text = textInput.value;
-  text = text.replace(/the /g, "diz bitches ");
+  text = text.replace(/the /g, "diz bitches' ");
   text = text.replace(/your/g, "that hoe's");
   text = text.replace(/you/g, "them hoes");
   text = text.replace(/falling in love /g, "eating Ass ");
