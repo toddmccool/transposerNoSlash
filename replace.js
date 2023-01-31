@@ -25,7 +25,7 @@ document.getElementById("replaceBtn").addEventListener("click", function () {
   text = text.replace(/ on them hoes/g, " on you");
   text = text.replace(/ spankout/g, " without");
   text = text.replace(/ me /g, " deez nuts");
-  text = text.replace(/ time /g, " deez nuts");
+  text = text.replace(/ time/g, " deez nuts");
 
   text = text.replace(/\b(a|A)\b/g, "a fuckin");
   output.innerHTML = text;
