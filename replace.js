@@ -3,30 +3,59 @@ const output = document.getElementById("output");
 
 document.getElementById("replaceBtn").addEventListener("click", function () {
   let text = textInput.value;
-  text = text.replace(/ the /g, " dis' ");
-  text = text.replace(/ your/g, " that hoe's");
-  text = text.replace(/ you/g, " them hoes");
-  text = text.replace(/ falling in love /g, " eating Ass ");
-  text.replace(/Falling in love /g, " eating Ass ");
 
-  text = text.replace(/ fallin\sin\slove /g, " eatin Ass ");
-  text = text.replace(/Fallin\sin\slove /g, " Eatin Ass ");
-  text = text.replace(/ love/g, " ass");
-  text = text.replace(/Love/g, " Ass");
-  text = text.replace(/ assd/g, " spanked");
-  text = text.replace(/ good/g, " tight");
-  text = text.replace(/I ass/g, " i'd bang");
-  text = text.replace(/ ass me/g, " spank me");
-  text = text.replace(/ heart/g, " deeYock");
-  text = text.replace(/ babe/g, " beeYotch");
+  const wordsToPreserve = [
+    "every",
+    "Every",
+    "love",
+    "if",
+    "do",
+    "dream",
+    "you",
+    "never",
+    "in",
+    "once",
+    "believe",
+    "heart",
+  ];
 
-  text = text.replace(/ talk to/g, " fart on");
-  text = text.replace(/ talking to/g, " farting on");
-  text = text.replace(/ on them hoes/g, " on you");
-  text = text.replace(/ spankout/g, " without");
-  text = text.replace(/ me /g, " deez nuts");
-  text = text.replace(/ time/g, " deez nuts");
+  let words = text.split(" ");
 
-  text = text.replace(/\b(a|A)\b/g, "a fuckin");
+  for (let i = 0; i < words.length; i++) {
+    if (wordsToPreserve.includes(words[i])) {
+      continue;
+    } else {
+      switch (words[i][0].toLowerCase()) {
+        case "a":
+          words[i] = "assHat";
+          break;
+        case "b":
+          words[i] = "buttCheeks";
+          break;
+        case "c":
+          words[i] = "cuntKnuckle";
+          break;
+        case "d":
+          words[i] = "deezNuts";
+          break;
+        case "e":
+          words[i] = "escapade";
+          break;
+        case "f":
+          words[i] = "flapjack";
+          break;
+        case "g":
+          words[i] = "gay";
+          break;
+        case "h":
+          words[i] = "hempNecklace";
+          break;
+        default:
+          break;
+      }
+    }
+  }
+
+  text = words.join(" ");
   output.innerHTML = text;
 });
