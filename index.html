@@ -2,17 +2,54 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>new vowel Replacer</title>
+    <title>New Vowel Replacer</title>
   </head>
   <body>
-    <textarea id="textInput" rows="30" cols="80"></textarea>
-    <br />
-    <button id="replaceBtn">
-      Replace and view your new and imporoved lyrics below!
-    </button>
-    <br />
-    <br />
-    <textarea id="output" rows="50" cols="80" readonly></textarea>
+    <div id="textContainer">
+      <textarea id="textInput" rows="30" cols="80"></textarea>
+      <br />
+      <button id="replaceBtn" onclick="replaceText()">
+        Replace and view your new and improved lyrics below!
+      </button>
+    </div>
+    <div id="outputContainer" style="display: none">
+      <h2>Original Text and Translations:</h2>
+      <div id="output"></div>
+    </div>
     <script src="replace.js"></script>
+    <script>
+      function replaceText() {
+        // Get the input value from the user
+        const inputText = document.getElementById("textInput").value;
+
+        // Replace the vowels using the replaceVowels function from replace.js
+        const translatedText = replaceVowels(inputText);
+
+        // Split the original and translated text into lines
+        const inputLines = inputText.split(/\r?\n/);
+        const translatedLines = translatedText.split(/\r?\n/);
+
+        // Display the original text and translated text line by line
+        const outputDiv = document.getElementById("output");
+        for (let i = 0; i < inputLines.length; i++) {
+          const inputLine = inputLines[i];
+          const translatedLine = translatedLines[i];
+          const lineDiv = document.createElement("div");
+          const inputPara = document.createElement("p");
+          inputPara.textContent = inputLine;
+          lineDiv.appendChild(inputPara);
+          const translatedPara = document.createElement("p");
+          translatedPara.innerHTML = "<em>" + translatedLine + "</em>";
+          lineDiv.appendChild(translatedPara);
+          outputDiv.appendChild(lineDiv);
+        }
+
+        // Show the output container
+        const textContainer = document.getElementById("textContainer");
+        const outputContainer = document.getElementById("outputContainer");
+        textContainer.style.display = "none";
+        outputContainer.style.display = "block";
+      }
+    </script>
   </body>
 </html>
