@@ -184,6 +184,7 @@ function replaceVowels(inputText) {
 
     line = line.replace(/ezz/g, "eLzz");
     line = line.replace(/eh/g, "ehL");
+    line = line.replace(/ehLzd/g, "yahwLn");
 
     translatedLines.push(line);
   }
